@@ -88,6 +88,7 @@ app.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+//Midleware checking if user is logged in
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
